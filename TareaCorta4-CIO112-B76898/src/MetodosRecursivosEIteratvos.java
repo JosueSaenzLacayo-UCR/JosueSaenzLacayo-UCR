@@ -1,3 +1,7 @@
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+
 public class MetodosRecursivosEIteratvos 
 {
     private int numero;
@@ -66,14 +70,15 @@ public class MetodosRecursivosEIteratvos
 
     public String convertirBinarioIterar(int n)
     {
+        StringBuilder binario = new StringBuilder();
         String binarioNum = "";
         while(0<n)
         {
             binarioNum +=n%2;
             n/=2;
         }
-
-        return binarioNum;
+        binario.append(binarioNum);
+        return binario.reverse().toString();
     }
 
     public long calcularExponencial(int n, int exp)
